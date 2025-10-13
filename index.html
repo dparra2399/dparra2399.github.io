@@ -64,50 +64,59 @@
       </tbody>
     </table>
 
-    <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <table style="width:100%; max-width:800px; border:0; border-spacing:0 10px; border-collapse:separate; margin:0 auto;">
       <tbody>
-        <tr bgcolor="#ffffd0">
+
+        <tr onmouseout="spad_lidar_stop()" onmouseover="spad_lidar_start()"  bgcolor="#ffffd0">
           <td style="padding:16px;width:20%;vertical-align:middle">
             <div class="one">
-              <img src='images/spad_lidar.jpg' width="160">
+              <div class="two" id='spad_lidar_image'>
+              <img src="images/spad_lidar_exp.png", width="160">
+              </div>
+              <img src='images/mip360_sat.jpg' width="160">
             </div>
+            <script type="text/javascript">
+              function spad_lidar_start() {
+                document.getElementById('spad_lidar_image').style.opacity = "1";
+              }
+
+              function spad_lidar_stop() {
+                document.getElementById('spad_lidar_image').style.opacity = "0";
+              }
+              mip360_stop()
+            </script>
           </td>
           <td style="padding:8px;width:80%;vertical-align:middle">
-            <span class="papertitle">Hardware-Aware Coding Design for Compressive Single-Photon 3D Cameras</span>
+            <a href="http://dparra2399.github.io/spad_lidar">
+              <span class="papertitle">Hardware-Aware Coding Function Design for Compressive Single-Photon 3D Cameras</span>
+            </a>
             <br>
-            <strong>David Parra</strong>, Advisors: Andreas Velten, Mohit Gupta
+            <strong>David Parra</strong>, Felipe Gutierrez-Barragan, Trevor Seets, Andreas Velten
             <br>
-            <em>ICCP</em>, 2025 (under submission)
+            <em>IEEE TPAMI Special Issue (ICCP)</em>, 2025<br>
+            <em>CVPR CCD Poster</em>, 2025
             <br>
             <a href="data/Parra_ICCP2025.pdf">Paper</a> /
             <a href="data/Parra_ICCP2025_Supp.pdf">Supplement</a>
             <p></p>
-            <p>
-              We propose optimized coding and illumination strategies that jointly consider hardware constraints
-              and photon statistics to improve depth reconstruction quality in compressive single-photon imaging.
-            </p>
+            <p>mWe propose a framework that jointly optimizes the illumination waveform and coding functions that adhere to hardware constraints for compressive single-photon 3D cameras.</p>
           </td>
-        </tr>
+        </tr> 
 
         <tr>
           <td style="padding:16px;width:20%;vertical-align:middle">
             <div class="one">
-              <img src='images/flash_lidar.jpg' width="160">
+              <img src="images/flash_lidar.jpg" width="160" alt="Flash LiDAR">
             </div>
           </td>
           <td style="padding:8px;width:80%;vertical-align:middle">
-            <span class="papertitle">Fast Flash LiDAR Using Single-Photon Gated Cameras</span>
-            <br>
-            <strong>David Parra</strong>, Advisors: Andreas Velten, Mohit Gupta
-            <br>
-            <em>In preparation</em>
-            <br>
+            <span class="papertitle">Fast Flash LiDAR Using Single-Photon Gated Cameras</span><br>
+            <strong>David Parra</strong>, Advisors: Andreas Velten, Mohit Gupta<br>
+            <em>In preparation</em><br>
             <a href="data/Parra_FastFlash.pdf">Manuscript</a>
             <p></p>
-            <p>
-              We explore photon-efficient gating and computational methods for real-time flash LiDAR imaging,
-              enabling high-resolution 3D reconstructions under challenging illumination and dynamic scenes.
-            </p>
+            <p>We explore photon-efficient gating and computational methods for real-time flash LiDAR imaging,
+            enabling high-resolution 3D reconstructions under challenging illumination and dynamic scenes.</p>
           </td>
         </tr>
       </tbody>
