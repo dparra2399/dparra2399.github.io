@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>mip-NeRF 360</title>
+    <title>Hardware-Aware Coding Function Design for Compressive Single-Photon 3D Cameras</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,8 +16,8 @@
     <meta property="og:image:width" content="1296">
     <meta property="og:image:height" content="840">
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jonbarron.info/mipnerf360/"/>
-    <meta property="og:title" content="Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields" />
+    <meta property="og:url" content="https://dparra2399.github.io/spad_lidar/"/>
+    <meta property="og:title" content="Hardware-Aware Coding Function Design for Compressive Single-Photon 3D Cameras" />
     <meta property="og:description" content="Though neural radiance fields (NeRF) have demonstrated impressive view synthesis results on objects and small bounded regions of space, they struggle on 'unbounded' scenes, where the camera may point in any direction and content may exist at any distance. In this setting, existing NeRF-like models often produce blurry or low-resolution renderings (due to the unbalanced detail and scale of nearby and distant objects), are slow to train, and may exhibit artifacts due to the inherent ambiguity of the task of reconstructing a large scene from a small set of images. We present an extension of mip-NeRF (a NeRF variant that addresses sampling and aliasing) that uses a non-linear scene parameterization, online distillation, and a novel distortion-based regularizer to overcome the challenges presented by unbounded scenes. Our model, which we dub 'mip-NeRF 360' as we target scenes in which the camera rotates 360 degrees around a point, reduces mean-squared error by 54% compared to mip-NeRF, and is able to produce realistic synthesized views and detailed depth maps for highly intricate, unbounded real-world scenes." />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -26,7 +26,7 @@
     <meta name="twitter:image" content="https://jonbarron.info/mipnerf360/img/gardenvase.jpg" />
 
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💫</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💫</text></svg>">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -47,9 +47,9 @@
     <div class="container" id="main">
         <div class="row">
             <h2 class="col-md-12 text-center">
-                <b>Mip-NeRF 360</b>: Unbounded <br> Anti-Aliased Neural Radiance Fields</br> 
+                Hardware-Aware Coding Function Design<br> for Compressive Single-Photon 3D Cameras</br> 
                 <small>
-								CVPR 2022 (Oral Presentation)
+				IEEE TPAMI Special Issue (ICCP), 2025
                 </small>
             </h2>
         </div>
@@ -57,34 +57,28 @@
             <div class="col-md-12 text-center">
                 <ul class="list-inline">
                     <li>
-                        <a href="https://jonbarron.info/">
-                          Jonathan T. Barron
+                        <a href="https://dparra2399.github.io">
+                          David Parra
                         </a>
-                        </br>Google
+                        </br>UW-Madison
                     </li>
                     <li>
-                        <a href="http://bmild.github.io/">
-                            Ben Mildenhall
+                        <a href="https://pages.cs.wisc.edu/~felipe/">
+                            Felipe Gutierrez-Barragan
                         </a>
-                        </br>Google
+                        </br>Indepedent Researcher
                     </li>
                     <li>
-                        <a href="https://scholar.harvard.edu/dorverbin/home">
-                          Dor Verbin
+                        <a href="https://www.linkedin.com/in/trevor-seets/">
+                          Trevor Seets
                         </a>
-                        </br>Harvard University
+                        </br>UW-Madison
                     </li><br>
                     <li>
-                        <a href="https://pratulsrinivasan.github.io/">
-                          Pratul P. Srinivasan
+                        <a href="https://biostat.wisc.edu/~velten/">
+                          Andreas Velten
                         </a>
-                        </br>Google
-                    </li>
-                    <li>
-                        <a href="https://phogzone.com/">
-                          Peter Hedman
-                        </a>
-                        </br>Google
+                        </br>UW-Madison
                     </li>
                 </ul>
             </div>
@@ -96,32 +90,12 @@
                     <ul class="nav nav-pills nav-justified">
                         <li>
                             <a href="https://arxiv.org/abs/2111.12077">
-                            <image src="img/360_paper_image.jpg" height="60px">
+                            <image src="img/spad_lidar_paper_image.png" height="60px">
                                 <h4><strong>Paper</strong></h4>
                             </a>
                         </li>
                         <li>
-                            <a href="https://youtu.be/zBSH-k9GbV4">
-                            <image src="img/youtube_icon.png" height="60px">
-                                <h4><strong>Video</strong></h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://storage.googleapis.com/gresearch/refraw360/360_v2.zip" target="popup" onclick="window.open('http://storage.googleapis.com/gresearch/refraw360/360_v2.zip','popup','width=600,height=400')">
-                            <image src="img/database_icon.png" height="60px">
-                                <h4><strong>Dataset Pt. 1</strong></h4>
-                            </a>							
-                        </li>
-                        <li>
-                            <a href="https://storage.googleapis.com/gresearch/refraw360/360_extra_scenes.zip
-" target="popup" onclick="window.open('https://storage.googleapis.com/gresearch/refraw360/360_extra_scenes.zip
-','popup','width=600,height=400')">
-                            <image src="img/database_icon.png" height="60px">
-                                <h4><strong>Dataset Pt. 2</strong></h4>
-                            </a>							
-                        </li>
-                        <li>
-                            <a href="https://github.com/google-research/multinerf">
+                            <a href="https://github.com/dparra2399/LearnedCoWSiP">
                             <image src="img/github.png" height="60px">
                                 <h4><strong>Code</strong></h4>
                             </a>
