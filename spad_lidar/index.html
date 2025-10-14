@@ -18,11 +18,11 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://dparra2399.github.io/spad_lidar/"/>
     <meta property="og:title" content="Hardware-Aware Coding Function Design for Compressive Single-Photon 3D Cameras" />
-    <meta property="og:description" content="Though neural radiance fields (NeRF) have demonstrated impressive view synthesis results on objects and small bounded regions of space, they struggle on 'unbounded' scenes, where the camera may point in any direction and content may exist at any distance. In this setting, existing NeRF-like models often produce blurry or low-resolution renderings (due to the unbalanced detail and scale of nearby and distant objects), are slow to train, and may exhibit artifacts due to the inherent ambiguity of the task of reconstructing a large scene from a small set of images. We present an extension of mip-NeRF (a NeRF variant that addresses sampling and aliasing) that uses a non-linear scene parameterization, online distillation, and a novel distortion-based regularizer to overcome the challenges presented by unbounded scenes. Our model, which we dub 'mip-NeRF 360' as we target scenes in which the camera rotates 360 degrees around a point, reduces mean-squared error by 54% compared to mip-NeRF, and is able to produce realistic synthesized views and detailed depth maps for highly intricate, unbounded real-world scenes." />
+    <meta property="og:description" content="Single-photon cameras are becoming increasingly popular in time-of-flight 3D imaging because they can time-tag individual photons with extreme resolution. However, their performance is susceptible to hardware limitations, such as system bandwidth, maximum laser power, sensor data rates, and in-sensor memory and compute resources. Compressive histograms were recently introduced as a solution to the challenge of data rates through an online in-sensor compression of photon timestamp data. Although compressive histograms work within limited in-sensor memory and computational resources, they underperform when subjected to real-world illumination hardware constraints. To address this, we present a constrained optimization approach for designing practical coding functions for compressive single-photon 3D imaging. Using gradient descent, we jointly optimize an illumination and coding matrix (i.e., the coding functions) that adheres to hardware constraints. We show through extensive simulations that our coding functions consistently outperform traditional coding designs under both bandwidth and peak power constraints. This advantage is particularly pronounced in systems constrained by peak power. Finally, we show that our approach adapts to arbitrary parameterized impulse responses by evaluating it on a real-world system with a non-ideal impulse response function." />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields" />
-    <meta name="twitter:description" content="Though neural radiance fields (NeRF) have demonstrated impressive view synthesis results on objects and small bounded regions of space, they struggle on 'unbounded' scenes, where the camera may point in any direction and content may exist at any distance. In this setting, existing NeRF-like models often produce blurry or low-resolution renderings (due to the unbalanced detail and scale of nearby and distant objects), are slow to train, and may exhibit artifacts due to the inherent ambiguity of the task of reconstructing a large scene from a small set of images. We present an extension of mip-NeRF (a NeRF variant that addresses sampling and aliasing) that uses a non-linear scene parameterization, online distillation, and a novel distortion-based regularizer to overcome the challenges presented by unbounded scenes. Our model, which we dub 'mip-NeRF 360' as we target scenes in which the camera rotates 360 degrees around a point, reduces mean-squared error by 54% compared to mip-NeRF, and is able to produce realistic synthesized views and detailed depth maps for highly intricate, unbounded real-world scenes." />
+    <meta name="twitter:title" content="Hardware-Aware Coding Function Design for Compressive Single-Photon 3D Cameras" />
+    <meta name="twitter:description" content="Single-photon cameras are becoming increasingly popular in time-of-flight 3D imaging because they can time-tag individual photons with extreme resolution. However, their performance is susceptible to hardware limitations, such as system bandwidth, maximum laser power, sensor data rates, and in-sensor memory and compute resources. Compressive histograms were recently introduced as a solution to the challenge of data rates through an online in-sensor compression of photon timestamp data. Although compressive histograms work within limited in-sensor memory and computational resources, they underperform when subjected to real-world illumination hardware constraints. To address this, we present a constrained optimization approach for designing practical coding functions for compressive single-photon 3D imaging. Using gradient descent, we jointly optimize an illumination and coding matrix (i.e., the coding functions) that adheres to hardware constraints. We show through extensive simulations that our coding functions consistently outperform traditional coding designs under both bandwidth and peak power constraints. This advantage is particularly pronounced in systems constrained by peak power. Finally, we show that our approach adapts to arbitrary parameterized impulse responses by evaluating it on a real-world system with a non-ideal impulse response function." />
     <meta name="twitter:image" content="https://jonbarron.info/mipnerf360/img/gardenvase.jpg" />
 
 
@@ -104,7 +104,7 @@
                 </div>
         </div>
 
-
+<!-- 
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -117,7 +117,7 @@
 							Rendered images and depths from our model.
 							</p>
 						</div>
-        </div>
+        </div> -->
 
 
         <div class="row">
@@ -126,23 +126,8 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-Though neural radiance fields (NeRF) have demonstrated impressive view synthesis results on objects and small bounded regions of space, they struggle on "unbounded" scenes, where the camera may point in any direction and content may exist at any distance. In this setting, existing NeRF-like models often produce blurry or low-resolution renderings (due to the unbalanced detail and scale of nearby and distant objects), are slow to train, and may exhibit artifacts due to the inherent ambiguity of the task of reconstructing a large scene from a small set of images. We present an extension of mip-NeRF (a NeRF variant that addresses sampling and aliasing) that uses a non-linear scene parameterization, online distillation, and a novel distortion-based regularizer to overcome the challenges presented by unbounded scenes. Our model, which we dub "mip-NeRF 360" as we target scenes in which the camera rotates 360 degrees around a point, reduces mean-squared error by 54% compared to mip-NeRF, and is able to produce realistic synthesized views and detailed depth maps for highly intricate, unbounded real-world scenes.
+                    Single-photon cameras are becoming increasingly popular in time-of-flight 3D imaging because they can time-tag individual photons with extreme resolution. However, their performance is susceptible to hardware limitations, such as system bandwidth, maximum laser power, sensor data rates, and in-sensor memory and compute resources. Compressive histograms were recently introduced as a solution to the challenge of data rates through an online in-sensor compression of photon timestamp data. Although compressive histograms work within limited in-sensor memory and computational resources, they underperform when subjected to real-world illumination hardware constraints. To address this, we present a constrained optimization approach for designing practical coding functions for compressive single-photon 3D imaging. Using gradient descent, we jointly optimize an illumination and coding matrix (i.e., the coding functions) that adheres to hardware constraints. We show through extensive simulations that our coding functions consistently outperform traditional coding designs under both bandwidth and peak power constraints. This advantage is particularly pronounced in systems constrained by peak power. Finally, we show that our approach adapts to arbitrary parameterized impulse responses by evaluating it on a real-world system with a non-ideal impulse response function.
                 </p>
-            </div>
-        </div>
-
-
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Video
-                </h3>
-                <div class="text-center">
-                    <div style="position:relative;padding-top:56.25%;">
-                        <iframe src="https://youtube.com/embed/zBSH-k9GbV4" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -154,13 +139,17 @@ Though neural radiance fields (NeRF) have demonstrated impressive view synthesis
                 </h3>
                 <div class="form-group col-md-10 col-md-offset-1">
                     <textarea id="bibtex" class="form-control" readonly>
-@article{barron2022mipnerf360,
-    title={Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields},
-    author={Jonathan T. Barron and Ben Mildenhall and 
-            Dor Verbin and Pratul P. Srinivasan and Peter Hedman},
-    journal={CVPR},
-    year={2022}
-}</textarea>
+                    @ARTICLE{11125818,
+  author={Parra, David and Gutierrez-Barragan, Felipe and Seets, Trevor and Velten, Andreas},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+  title={Hardware-aware Coding Function Design for Compressive Single-photon 3D Cameras}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-12},
+  keywords={Histograms;Encoding;Three-dimensional displays;Photonics;Lighting;Single-photon avalanche diodes;Hardware;Cameras;Bandwidth;Codes;single-photon avalanche diodes;3d imaging;time-of-flight;optimization;hardware-aware;coding},
+  doi={10.1109/TPAMI.2025.3599073}}
+                    </textarea>
                 </div>
             </div>
         </div>
@@ -171,8 +160,7 @@ Though neural radiance fields (NeRF) have demonstrated impressive view synthesis
                     Acknowledgements
                 </h3>
                 <p class="text-justify">
-                Thanks to Ricardo Martin-Brualla and David Salesin for their comments on the text, and to George Drettakis and Georgios Kopanas for graciously assisting us with our baseline evaluation.
-                    <br>
+                <br>
                 The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
                 </p>
             </div>
